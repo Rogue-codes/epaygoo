@@ -1,24 +1,68 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import styled from 'styled-components';
+import FifthSection from './Components/FifthSection';
+import FirstSection from './Components/FirstSection';
+import Footer from './Components/Footer';
+import FourthSection from './Components/FourthSection';
+import Nav from './Components/Nav';
+import SecondSection from './Components/SecondSection';
+import SixthSection from './Components/SixthSection';
+import ThirdSection from './Components/ThirdSection';
+
+const Container = styled.body`
+  background: ${props => props.bg};
+  color: ${props => props.cl};
+  transition: all .5s linear;
+  position: relative;
+`
+const BT = styled.button`
+  position: fixed;
+  left: 95%;
+  top: 90%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: all .5s linear;
+  opacity: ${props => props.opa};
+  border: 1px solid #333;
+  background: #d7286b;
+`
 
 function App() {
+  const [dark, setdark] = useState(false)
+
+  const [scroll, setScroll] = useState(false)
+
+  const switchTheme = () => {
+    setdark(!dark)
+    if(dark){
+      console.log('first')
+    }
+  }
+
+  window.addEventListener('scroll', () => {
+    if(window.scrollY >= 700){
+      setScroll(true)
+    }else{
+      setScroll(false)
+    }
+  })
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className="App" bg={dark ? 'rgb(0, 0, 14)' : '#fff'} cl={dark ? '#ffff' : '#3f3d56'}>
+      <Nav id='top' switchTheme ={switchTheme}/>
+      <FirstSection/>
+      <a href="#top">
+        <BT opa={scroll ? '1' : '0'}>up</BT>
+      </a>
+      <SecondSection dark={dark} />
+      <ThirdSection/>
+      <FourthSection/>
+      <FifthSection dark={dark}/>
+      <SixthSection dark={dark}/>
+      <Footer dark={dark}/>
+    </Container>
   );
 }
 
