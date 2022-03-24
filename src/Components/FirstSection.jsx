@@ -70,13 +70,12 @@ const Right = styled.div`
 const Btn = styled.button`
     @media (max-width:480px) {
         font-size: 1.4rem;
-        margin-top: 2%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        color: green;
+        margin-top: 8%;
         margin-bottom: 5%;
         margin-left: 2%;
         padding: 4% 8%;
+        /* height: 15vh; */
     }
     margin-top: 2%;
     background: #d7286b;
