@@ -29,7 +29,7 @@ const Navigation = styled.nav`
         display: none;
         @media (max-width:480px) {
             display: block;
-            font-size: 1.2rem;
+            font-size: 2rem;
             padding-right: 5%;
         }
     }
