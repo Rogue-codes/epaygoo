@@ -29,6 +29,7 @@ const Text = styled.h1`
         width: 100%;
         padding-left: 2%;
         margin-bottom: 9%;
+        line-height: 50px;
     }
     margin-top: 10%;
     margin-bottom: 2%;
@@ -70,6 +71,9 @@ const Btn = styled.button`
     @media (max-width:480px) {
         font-size: 1.4rem;
         margin-top: 2%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-bottom: 5%;
         margin-left: 2%;
         padding: 4% 8%;
