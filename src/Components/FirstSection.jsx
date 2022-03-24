@@ -7,6 +7,7 @@ const Container = styled.div`
         gap: 5%;
         height: auto;
         align-items: flex-start;
+        padding-bottom: 5%;
     }
     width: 100%;
     height: 86Vh;
@@ -18,6 +19,8 @@ const Container = styled.div`
 const Lefty = styled.div`
     @media (max-width:480px) {
         width: 100%;
+        height: auto;
+        border-bottom: 11px solid red;
     }
     width: 70%;
     height: 100%;
@@ -72,10 +75,9 @@ const Btn = styled.button`
         font-size: 1.4rem;
         color: green;
         margin-top: 8%;
-        margin-bottom: 5%;
+        margin-bottom: 10%;
         margin-left: 2%;
         padding: 4% 8%;
-        /* height: 15vh; */
     }
     margin-top: 2%;
     background: #d7286b;
