@@ -2,6 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Section = styled.div`
+    @media (max-width:480px) {
+        flex-direction: column;
+        gap: 5%;
+        height: auto;
+        align-items: flex-start;
+    }
     width: 100%;
     height: 100vh;
     display: flex;
@@ -10,10 +16,14 @@ const Section = styled.div`
     align-items: center;
 `
 const Cards = styled.div`
+    @media (max-width:480px) {
+      width: 90%;
+      margin: auto;
+      margin-top: 14%;
+    }
     width: 30%;
     height: 80vh;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, grey 0px 12px 13px, grey 0px -3px 5px;
-    /* background: ${props => props.bg}; */
 `
 const Top = styled.div`
   width: 100%;
@@ -35,18 +45,27 @@ const Bottom = styled.div`
   gap: 4%;
 `
 const Heading = styled.h2`
+  @media (max-width:480px) {
+      font-size: 1.2rem;
+  }
   font-family: 'Concert One', cursive;
   font-size: 2vw;
   text-transform: uppercase;
 `
 
 const Desc = styled.p`
+  @media (max-width:480px) {
+      font-size: 1rem;
+  }
   text-align: center;
   font-size: 1.6vw;
   font-family: 'PT Sans', sans-serif;
 `
 
 const Btn = styled.button`
+    @media (max-width:480px) {
+        font-size: 1rem;
+    }
     margin-top: 2%;
     background: #d7286b;
     cursor: pointer;

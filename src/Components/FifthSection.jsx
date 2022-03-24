@@ -19,6 +19,10 @@ const Top = styled.div`
     gap: 2%;
 `
 const Bottom = styled.div`
+    @media (max-width:480px) {
+        flex-direction: column;
+        height: auto;
+    }
     width: 100%;
     height: 70vh;
     display: flex;
@@ -27,6 +31,10 @@ const Bottom = styled.div`
     gap: 2%;
 `
 const Cards = styled.div`
+    @media (max-width:480px) {
+        width: 90%;
+        margin-top: 10%;
+    }
     width: 30%;
     height: 50vh;
     padding: 1%;
@@ -36,12 +44,22 @@ const Cards = styled.div`
     color: ${props => props.cl};
 `
 const Text = styled.h2`
+    @media (max-width:450px) {
+        font-size: 1.5rem;
+        width: 100%;
+        margin-left: 3%;
+    }
     margin-top: 2%;
     font-size: 4vw;
     width: 50%;
     font-family: 'Concert One', cursive;
 `
 const Desc = styled.p`
+    @media (max-width:450px) {
+        font-size: .8rem;
+        width: 100%;
+        margin-left: 3%;
+    }
     font-size: 2vw;
     width: 70%;
     margin-top: 2%;
@@ -68,11 +86,21 @@ const BottomCard = styled.div`
     gap: 4%;
 `
 const Comment = styled.p`
+    @media (max-width:480px) {
+        font-size: .8rem;
+        width: 100%;
+        padding-left: 3%;
+    }
     font-size: 1.7vw;
     line-height: 30px;
     font-family: 'PT Sans', sans-serif;
 `
 const Left = styled.div`
+    @media (max-width:480px) {
+        margin-left: 3%;
+        width: 30px;
+        height: 30px;
+    }
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -84,6 +112,9 @@ const Left = styled.div`
     }
 `
 const Right = styled.h3`
+    @media (max-width:480px) {
+        font-size: .5rem;
+    }
     font-size: 1vw;
     font-family: 'PT Sans', sans-serif;
 `

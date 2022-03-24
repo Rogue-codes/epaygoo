@@ -27,6 +27,7 @@ const Text = styled.h1`
     @media (max-width:480px) {
         font-size: 1.8rem;
         width: 100%;
+        padding-left: 2%;
     }
     margin-top: 10%;
     margin-bottom: 2%;
@@ -40,6 +41,7 @@ const Passage = styled.p`
     @media (max-width:480px) {
         font-size: 1.2rem;
         width: 100%;
+        padding-left: 2%;
     }
     font-family: 'PT Sans', sans-serif;
     font-size:2vw;
@@ -67,6 +69,7 @@ const Btn = styled.button`
     @media (max-width:480px) {
         font-size: 1.2rem;
         margin-bottom: 5%;
+        margin-left: 2%;
     }
     margin-top: 2%;
     background: #d7286b;

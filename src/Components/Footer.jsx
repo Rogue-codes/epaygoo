@@ -2,9 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 // import { faBuilding, faCreditCard, faShop, faUser } from '@fortawesome/free-solid-svg-icons'
-import { faDiscord, faFacebook, faLinkedinIn, faTwitter }  from '@fortawesome/free-brands-svg-icons'
 
 const FooterCont = styled.footer`
+    @media (max-width:480px) {
+        height: auto;
+    }
     margin-top: 5%;
     width: 100%;
     height: 100vh;
@@ -12,10 +14,17 @@ const FooterCont = styled.footer`
     padding: 2%;
 `
 const Top = styled.div`
+    @media (max-width:480px) {
+        flex-wrap: wrap;
+        height: auto;
+    }
     height: 50%;
     display: flex;
     justify-content: space-between;
     ul{
+        @media (max-width:480px) {
+            width: 50%;
+        }
         list-style-type: none;
         li{
             &:nth-child(1){
@@ -28,13 +37,32 @@ const Top = styled.div`
     }
 `
 const Bottom = styled.div`
+    @media (max-width:480px) {
+        flex-wrap: wrap;
+        height: auto;
+        border-top: 1px solid #000;
+        margin-top: 5%;
+        padding-top: 5%;
+    }
     height: 50%;
     display: flex;
     justify-content: space-between;
     ul{
+        @media (max-width:480px) {
+            width: 50%;
+        }
         list-style-type: none;
         li{
+            @media (max-width:480px) {
+                font-size: 1rem;
+                margin-top: 2%;
+            }
             &:nth-child(1){
+                @media (max-width:480px) {
+                    margin-top: 5%;
+                    margin-bottom: 5%;
+                }
+                
                 font-weight: 800;
                 margin-bottom: 5%;
             }
@@ -91,10 +119,10 @@ function Footer({dark}) {
                 <li>Contact</li>
                 <li>help@epaygoo.com</li>
                 <span>
-                    <FontAwesomeIcon Icon={faFacebook}></FontAwesomeIcon>
+                    {/* <FontAwesomeIcon Icon={faFacebook}></FontAwesomeIcon>
                     <FontAwesomeIcon Icon={faLinkedinIn}></FontAwesomeIcon>
                     <FontAwesomeIcon Icon={faTwitter}></FontAwesomeIcon>
-                    <FontAwesomeIcon Icon={faDiscord}></FontAwesomeIcon>
+                    <FontAwesomeIcon Icon={faDiscord}></FontAwesomeIcon> */}
                 </span>
             </ul>
 

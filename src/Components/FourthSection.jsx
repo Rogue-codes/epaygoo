@@ -2,6 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Tittle = styled.h1`
+    @media (max-width:480px) {
+        display: none;
+    }
     font-size: 5vw;
     display: flex;
     justify-content: center;
@@ -9,6 +12,9 @@ const Tittle = styled.h1`
     font-family: 'Concert One', cursive;
 `
 const Fourth = styled.div`
+    @media (max-width:480px) {
+        display: none;
+    }
     width: 100%;
     height: 100vh;
     display: flex;
@@ -21,19 +27,31 @@ const Fourth = styled.div`
         .card{
             transition: all .3s linear;
             &:nth-child(1){
+                @media (max-width:480px) {
+                    transform: translatey(-125%);
+                }
                 transform: translateX(-125%);
             }
             &:nth-child(2){
+                @media (max-width:480px) {
+                    transform: translatey(-5%);
+                }
                 transition: all .3s linear;
                 transform: translateX(-5%);
             }
             &:nth-child(3){
+                @media (max-width:480px) {
+                    transform: translatey(125%);
+                }
                 transition: all .3s linear;
                 transform: translateX(125%);
             }
         }
     }
     .card{
+        @media (max-width:480px) {
+            width: 95%;
+        }
         width: 25%;
         height: 80%;
         position: absolute;
@@ -50,7 +68,6 @@ const Fourth = styled.div`
     }  
 `
 const Top = styled.h2`
-    /* transform: rotate(45deg); */
     font-size: 4vw;
     font-family: 'PT Sans', sans-serif;
     text-align: center;

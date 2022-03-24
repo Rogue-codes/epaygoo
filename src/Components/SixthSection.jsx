@@ -2,6 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Sixth = styled.div`
+    @media (max-width:450px) {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
     width: 100%;
     height: 70vh;
     background: ${props => props.bg};
@@ -12,6 +17,9 @@ const Sixth = styled.div`
     align-items: center;
 `
 const Left = styled.div`
+    @media (max-width:450px) {
+        width: 100%;
+    }
     width: 50%;
     height: 80%;
     display: flex;
@@ -20,6 +28,10 @@ const Left = styled.div`
     flex-direction: column;
 `
 const Right = styled.div`
+    @media (max-width:450px) {
+        width: 100%;
+        justify-content: flex-start;
+    }
     width: 50%;
     height: 80%;
     display: flex;
@@ -27,17 +39,27 @@ const Right = styled.div`
     align-items: center;
 `
 const SmallText = styled.p`
+    @media (max-width:450px) {
+        font-size: 1.2rem;
+    }
     font-size: 2vw;
     font-weight: 500;
     font-family: 'PT Sans', sans-serif;
 `
 
 const Text = styled.h2`
+    @media (max-width:450px) {
+        font-size: 2rem;
+    }
     font-size: 5vw;
     font-family: 'Concert One', cursive;
     width: 90%;
 `
 const Btn = styled.button`
+    @media (max-width:450px) {
+        font-size: 1.2rem;
+        margin-top: -40%;
+    }
     margin-top: 2%;
     background: #d7286b;
     cursor: pointer;

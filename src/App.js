@@ -8,14 +8,25 @@ import Nav from './Components/Nav';
 import SecondSection from './Components/SecondSection';
 import SixthSection from './Components/SixthSection';
 import ThirdSection from './Components/ThirdSection';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 
 const Container = styled.body`
   background: ${props => props.bg};
   color: ${props => props.cl};
   transition: all .5s linear;
   position: relative;
+  .ico{
+      @media (max-width:480px) {
+        font-size: 1.2rem;
+      }
+    font-weight: 2vw;
+  }
 `
 const BT = styled.button`
+  @media (max-width:480px) {
+    left: 80%;
+  }
   position: fixed;
   left: 95%;
   top: 90%;
@@ -53,15 +64,15 @@ function App() {
     <Container className="App" bg={dark ? 'rgb(0, 0, 14)' : '#fff'} cl={dark ? '#ffff' : '#3f3d56'}>
       <Nav id='top' switchTheme ={switchTheme}/>
       <FirstSection/>
-      {/* <a href="#top">
-        <BT opa={scroll ? '1' : '0'}>up</BT>
+      <a href="#top">
+        <BT opa={scroll ? '1' : '0'}><FontAwesomeIcon className='ico' icon={faArrowUp}></FontAwesomeIcon></BT>
       </a>
       <SecondSection dark={dark} />
       <ThirdSection/>
       <FourthSection/>
       <FifthSection dark={dark}/>
       <SixthSection dark={dark}/>
-      <Footer dark={dark}/> */}
+      <Footer dark={dark}/> 
     </Container>
   );
 }

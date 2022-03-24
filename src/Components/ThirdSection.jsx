@@ -3,6 +3,9 @@ import styled from 'styled-components'
 import Ityped from './Ityped'
 
 const Third = styled.div`
+    @media (max-width:480px) {
+        height: 120vh;
+    }
     width: 100%;
     height: 80vh;
     padding: 2%;
@@ -11,6 +14,10 @@ const Third = styled.div`
     align-items: center;
 `
 const Wrap = styled.div`
+    @media (max-width:480px) {
+        flex-direction: column;
+        gap: 10%;
+    }
     width: 100%;
     height: 80%;
     background: #d7286b;
@@ -19,9 +26,13 @@ const Wrap = styled.div`
     justify-content: center;
 `
 const Left = styled.div`
+    @media (max-width:480px) {
+        font-size: 1.5rem;
+        width: 100%;
+        padding-left: 2%;
+    }
     width: 50%;
     height: 80%;
-    /* border: 1px solid #000; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,9 +41,12 @@ const Left = styled.div`
     font-family: 'Concert One', cursive;
 `
 const Right = styled.div`
+    @media (max-width:480px) {
+        width: 80%;
+        margin-bottom: 15%;
+    }
     width: 50%;
     height: 80%;
-    /* border: 1px solid #fff; */
     img{
         width: 100%;
         height: 100%;
