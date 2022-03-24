@@ -53,7 +53,7 @@ function App() {
     <Container className="App" bg={dark ? 'rgb(0, 0, 14)' : '#fff'} cl={dark ? '#ffff' : '#3f3d56'}>
       <Nav id='top' switchTheme ={switchTheme}/>
       <FirstSection/>
-      <a href="#top">
+      {/* <a href="#top">
         <BT opa={scroll ? '1' : '0'}>up</BT>
       </a>
       <SecondSection dark={dark} />
@@ -61,7 +61,7 @@ function App() {
       <FourthSection/>
       <FifthSection dark={dark}/>
       <SixthSection dark={dark}/>
-      <Footer dark={dark}/>
+      <Footer dark={dark}/> */}
     </Container>
   );
 }

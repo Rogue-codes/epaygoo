@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-// import {FontAwesomeIcon} from '@fortawesome/fontawesome-free'
-// import { faDiscord, faFacebook, faLinkedin, faTwitter }  from '@fortawesome/free-brands-svg-icons'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+// import { faBuilding, faCreditCard, faShop, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faDiscord, faFacebook, faLinkedinIn, faTwitter }  from '@fortawesome/free-brands-svg-icons'
 
 const FooterCont = styled.footer`
     margin-top: 5%;
@@ -39,6 +40,11 @@ const Bottom = styled.div`
             }
             margin-top: 2%;
             font-family: 'PT Sans', sans-serif;
+        }
+        span{
+            width: 30%;
+            height: 10vh;
+            background: #000;
         }
     }
 `
@@ -84,12 +90,12 @@ function Footer({dark}) {
         <ul>
                 <li>Contact</li>
                 <li>help@epaygoo.com</li>
-                {/* <span>
+                <span>
                     <FontAwesomeIcon Icon={faFacebook}></FontAwesomeIcon>
-                    <FontAwesomeIcon Icon={faLinkedin}></FontAwesomeIcon>
+                    <FontAwesomeIcon Icon={faLinkedinIn}></FontAwesomeIcon>
                     <FontAwesomeIcon Icon={faTwitter}></FontAwesomeIcon>
                     <FontAwesomeIcon Icon={faDiscord}></FontAwesomeIcon>
-                </span> */}
+                </span>
             </ul>
 
             <ul>

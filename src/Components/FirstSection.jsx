@@ -2,6 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
+    @media (max-width:480px) {
+        flex-direction: column;
+        gap: 5%;
+        height: auto;
+        align-items: flex-start;
+    }
     width: 100%;
     height: 86Vh;
     display: flex;
@@ -10,11 +16,18 @@ const Container = styled.div`
     padding: 2%;
 `
 const Lefty = styled.div`
+    @media (max-width:480px) {
+        width: 100%;
+    }
     width: 70%;
     height: 100%;
 `
 
 const Text = styled.h1`
+    @media (max-width:480px) {
+        font-size: 1.8rem;
+        width: 100%;
+    }
     margin-top: 10%;
     margin-bottom: 2%;
     font-size: 4.3vw;
@@ -24,6 +37,10 @@ const Text = styled.h1`
 `
 
 const Passage = styled.p`
+    @media (max-width:480px) {
+        font-size: 1.2rem;
+        width: 100%;
+    }
     font-family: 'PT Sans', sans-serif;
     font-size:2vw;
     font-weight: 500;
@@ -34,6 +51,10 @@ const Passage = styled.p`
 `
 
 const Right = styled.div`
+    @media (max-width:480px) {
+        width: 100%;
+        margin-top: 10%;
+    }
     width: 50%;
     height: 100%;
     img{
@@ -43,6 +64,10 @@ const Right = styled.div`
     }
 `
 const Btn = styled.button`
+    @media (max-width:480px) {
+        font-size: 1.2rem;
+        margin-bottom: 5%;
+    }
     margin-top: 2%;
     background: #d7286b;
     cursor: pointer;
