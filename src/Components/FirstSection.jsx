@@ -20,7 +20,6 @@ const Lefty = styled.div`
     @media (max-width:480px) {
         width: 100%;
         height: auto;
-        border-bottom: 11px solid red;
     }
     width: 70%;
     height: 100%;
@@ -73,7 +72,6 @@ const Right = styled.div`
 const Btn = styled.button`
     @media (max-width:480px) {
         font-size: 1.4rem;
-        color: green;
         margin-top: 8%;
         margin-bottom: 10%;
         margin-left: 2%;
@@ -83,7 +81,7 @@ const Btn = styled.button`
     background: #d7286b;
     cursor: pointer;
     color: white;
-    font-family: 'Concert One', cursive;
+    font-family: 'PT Sans', sans-serif;
     border-radius: 5px;
     border: none;
     padding: 2% 5%;
