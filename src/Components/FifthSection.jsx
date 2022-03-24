@@ -87,7 +87,7 @@ const BottomCard = styled.div`
 `
 const Comment = styled.p`
     @media (max-width:480px) {
-        font-size: .8rem;
+        font-size: 1rem;
         width: 100%;
         padding-left: 3%;
     }
