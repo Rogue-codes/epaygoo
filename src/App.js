@@ -27,6 +27,7 @@ const BT = styled.button`
   @media (max-width:480px) {
     left: 80%;
   }
+  cursor: pointer;
   position: fixed;
   left: 95%;
   top: 90%;
