@@ -25,9 +25,10 @@ const Lefty = styled.div`
 
 const Text = styled.h1`
     @media (max-width:480px) {
-        font-size: 1.8rem;
+        font-size: 2rem;
         width: 100%;
         padding-left: 2%;
+        margin-bottom: 9%;
     }
     margin-top: 10%;
     margin-bottom: 2%;
@@ -39,7 +40,7 @@ const Text = styled.h1`
 
 const Passage = styled.p`
     @media (max-width:480px) {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         width: 100%;
         padding-left: 2%;
     }
@@ -67,9 +68,10 @@ const Right = styled.div`
 `
 const Btn = styled.button`
     @media (max-width:480px) {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         margin-bottom: 5%;
         margin-left: 2%;
+        padding: 4% 8%;
     }
     margin-top: 2%;
     background: #d7286b;
