@@ -69,6 +69,7 @@ const Right = styled.div`
 const Btn = styled.button`
     @media (max-width:480px) {
         font-size: 1.4rem;
+        margin-top: 2%;
         margin-bottom: 5%;
         margin-left: 2%;
         padding: 4% 8%;
