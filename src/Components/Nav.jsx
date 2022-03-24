@@ -24,6 +24,12 @@ const Navigation = styled.nav`
                 font-size: 1.2rem;
             }
         }
+        /* border: none;
+        border-radius: 50%;
+        padding: 1.2%; */
+        .ico{
+            font-size: 1.5vw;
+        }
     }
     .bars{
         display: none;
