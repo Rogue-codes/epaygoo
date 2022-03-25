@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faBars, faMoon } from '@fortawesome/free-solid-svg-icons'
 import { useTransition, animated } from 'react-spring'
+import { Link } from 'react-router-dom'
 
 const Navigation = styled.nav`
     width: 100%;
@@ -14,6 +15,23 @@ const Navigation = styled.nav`
     justify-content: space-between;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
+    .dark{
+        border: none;
+        border-radius: 50%;
+        padding: 1%; 
+        cursor:pointer;
+    }
+    a{
+        font-size: 1.2vw;
+        color: ${props => props.cl};
+        font-weight: 500;
+        text-decoration: none;
+        transition: all .5s linear;
+        &:hover{
+            color:#d7286b;
+        }
+
+    }
     button{
         @media (max-width:480px) {
             margin-left: 65%;
@@ -24,9 +42,6 @@ const Navigation = styled.nav`
                 font-size: 1.2rem;
             }
         }
-        /* border: none;
-        border-radius: 50%;
-        padding: 1.2%; */
         .ico{
             font-size: 1.5vw;
         }
@@ -105,16 +120,15 @@ const Logo = styled.div`
     }
 `
 const Mid = styled.div`
+    a{
+        color: ${ props => props.cl};
+    }
     @media (max-width:480px) {
         display: none;
     }
     width: 40%;
     display: flex;
     justify-content: space-between;
-`
-const Links = styled.a`
-    font-size: 1.2vw;
-    font-weight: 500;
 `
 const Right = styled.div`
     @media (max-width:480px) {
@@ -143,7 +157,7 @@ const Btn = styled.button`
     }
 `
 
-function Nav({switchTheme}) {   
+function Nav({switchTheme, dark}) {   
     
     const [showMenu, setShowMenu]= useState(false)
 
@@ -172,12 +186,12 @@ function Nav({switchTheme}) {
             <img src="/ePaygoo_Logo.png" alt="" />
         </Logo>
 
-        <Mid>
-            <Links>Mobile App</Links>
-            <Links>Features</Links>
-            <Links>About Us</Links>
-            <Links>Payment</Links>
-            <Links>Faq</Links>
+        <Mid cl={dark ? '#ffff' : '#3f3d56'}>
+            <Link to='/mobile'>Mobile App</Link>
+            <Link to='/features'>Features</Link>
+            <Link to='/about'>About Us</Link>
+            <Link to='/payment'>Payment</Link>
+            <Link to='/faq'>Faq</Link>
         </Mid>
 
 
@@ -185,7 +199,7 @@ function Nav({switchTheme}) {
             <Btn>Sign in</Btn>
         </Right>
 
-        <button onClick={switchTheme}><FontAwesomeIcon className='ico' icon={faMoon}></FontAwesomeIcon></button>
+        <button onClick={switchTheme} className='dark'><FontAwesomeIcon className='ico' icon={faMoon}></FontAwesomeIcon></button>
 
         <span onClick ={ () => setShowMenu(!showMenu) }><FontAwesomeIcon className='bars' icon={faBars}></FontAwesomeIcon></span>
 
@@ -200,11 +214,11 @@ function Nav({switchTheme}) {
         {
             menuTransitions(
             (styles, item) => item && <animated.div style={styles} className='animate'>
-                <Links>Mobile App</Links>
-                <Links>Features</Links>
-                <Links>About Us</Links>
-                <Links>Payment</Links>
-                <Links>Faq</Links>
+                <Link to='/mobile'>Mobile App</Link>
+                <Link to='/features'>Features</Link>
+                <Link to='/about'>About Us</Link>
+                <Link to='/payment'>Payment</Link>
+                <Link to='/faq'>Faq</Link>
             </animated.div>
             )
         }

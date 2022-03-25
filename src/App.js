@@ -1,15 +1,14 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import FifthSection from './Components/FifthSection';
-import FirstSection from './Components/FirstSection';
-import Footer from './Components/Footer';
-import FourthSection from './Components/FourthSection';
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import Home from './Components/Home';
 import Nav from './Components/Nav';
-import SecondSection from './Components/SecondSection';
-import SixthSection from './Components/SixthSection';
-import ThirdSection from './Components/ThirdSection';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import Footer from './Components/Footer';
+import MobileApp from './Components/Pages/MobileApp';
+import Features from './Components/Pages/Features';
+import About from './Components/Pages/About';
+import Payment from './Components/Pages/Payment';
+import Faq from './Components/Pages/Faq';
 
 const Container = styled.body`
   background: ${props => props.bg};
@@ -23,27 +22,11 @@ const Container = styled.body`
     font-weight: 2vw;
   }
 `
-const BT = styled.button`
-  @media (max-width:480px) {
-    left: 80%;
-  }
-  cursor: pointer;
-  position: fixed;
-  left: 95%;
-  top: 90%;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  transition: all .5s linear;
-  opacity: ${props => props.opa};
-  border: 1px solid #333;
-  background: #d7286b;
-`
+
 
 function App() {
   const [dark, setdark] = useState(false)
 
-  const [scroll, setScroll] = useState(false)
 
   const switchTheme = () => {
     setdark(!dark)
@@ -52,28 +35,22 @@ function App() {
     }
   }
 
-  window.addEventListener('scroll', () => {
-    if(window.scrollY >= 700){
-      setScroll(true)
-    }else{
-      setScroll(false)
-    }
-  })
 
 
   return (
     <Container className="App" bg={dark ? 'rgb(0, 0, 14)' : '#fff'} cl={dark ? '#ffff' : '#3f3d56'}>
-      <Nav id='top' switchTheme ={switchTheme}/>
-      <FirstSection/>
-      <a href="#top">
-        <BT opa={scroll ? '1' : '0'}><FontAwesomeIcon className='ico' icon={faArrowUp}></FontAwesomeIcon></BT>
-      </a>
-      <SecondSection dark={dark} />
-      <ThirdSection/>
-      <FourthSection/>
-      <FifthSection dark={dark}/>
-      <SixthSection dark={dark}/>
+      <Router>
+      <Nav id='top' switchTheme ={switchTheme} dark={dark}/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/mobile' element={<MobileApp/>}/>
+        <Route path='/features' element={<Features/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/payment' element={<Payment/>}/>
+        <Route path='/faq' element={<Faq/>}/>
+      </Routes>
       <Footer dark={dark}/> 
+      </Router>
     </Container>
   );
 }
