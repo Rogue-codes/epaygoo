@@ -139,6 +139,9 @@ const Right = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    a{
+        color: white;
+    }
 `
 const Btn = styled.button`
     width: 80%;
@@ -154,7 +157,11 @@ const Btn = styled.button`
         background: transparent;
         color: #d7286b;
         border: 2px solid #d7286b;
+        a{
+            color: #d7286b ;
+        }
     }
+
 `
 
 function Nav({switchTheme, dark}) {   
@@ -183,7 +190,7 @@ function Nav({switchTheme, dark}) {
   return (
     <Navigation>
         <Logo>
-            <img src="/ePaygoo_Logo.png" alt="" />
+           <Link to='/'><img src="/ePaygoo_Logo.png" alt="" /></Link> 
         </Logo>
 
         <Mid cl={dark ? '#ffff' : '#3f3d56'}>
@@ -196,7 +203,7 @@ function Nav({switchTheme, dark}) {
 
 
         <Right>
-            <Btn>Sign in</Btn>
+            <Btn><Link to='/form'>Sign in</Link></Btn>
         </Right>
 
         <button onClick={switchTheme} className='dark'><FontAwesomeIcon className='ico' icon={faMoon}></FontAwesomeIcon></button>

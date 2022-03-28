@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Fifth = styled.div`
     width: 100%;
     height: auto;
-    background: url(${props => props.bg});
+    background: (${props => props.bg});
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -121,7 +121,7 @@ const Right = styled.h3`
 
 function FifthSection({dark}) {
   return (
-    <Fifth bg={dark ? 'https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' : 'https://img.freepik.com/free-vector/background-elegant-white-texture_23-2148438405.jpg?w=900'}>
+    <Fifth bg={dark ? 'rgb(0, 0, 14)' : 'https://img.freepik.com/free-vector/background-elegant-white-texture_23-2148438405.jpg?w=900'}>
         <Top>
             <Text>Backed by strong global partners</Text>
             <Desc>ePaygoo is backed by notable investors as well as some of the best payments companies on the planet.</Desc>

@@ -9,6 +9,7 @@ import Features from './Components/Pages/Features';
 import About from './Components/Pages/About';
 import Payment from './Components/Pages/Payment';
 import Faq from './Components/Pages/Faq';
+import SgnUp from './Components/Pages/SgnUp';
 
 const Container = styled.body`
   background: ${props => props.bg};
@@ -38,7 +39,7 @@ function App() {
 
 
   return (
-    <Container className="App" bg={dark ? 'rgb(0, 0, 14)' : '#fff'} cl={dark ? '#ffff' : '#3f3d56'}>
+    <Container className="App" bg={dark ? 'rgb(0, 0, 14)' : '#f0f8ff'} cl={dark ? '#f0f8ff' : 'rgb(0, 0, 14)'}>
       <Router>
       <Nav id='top' switchTheme ={switchTheme} dark={dark}/>
       <Routes>
@@ -48,6 +49,7 @@ function App() {
         <Route path='/about' element={<About/>}/>
         <Route path='/payment' element={<Payment/>}/>
         <Route path='/faq' element={<Faq/>}/>
+        <Route path='/form' element={<SgnUp/>} dark={dark}/>
       </Routes>
       <Footer dark={dark}/> 
       </Router>

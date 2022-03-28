@@ -9,7 +9,7 @@ const Sixth = styled.div`
     }
     width: 100%;
     height: 70vh;
-    background: ${props => props.bg};
+    /* background: ${props => props.bg}; */
     margin-top: 5%;
     display: flex;
     padding: 4%;
