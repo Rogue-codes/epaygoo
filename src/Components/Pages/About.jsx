@@ -62,6 +62,7 @@ const Text = styled.h1`
     font-size: 3rem;
     width: 100%;
     margin-top: -13%;
+    line-height: 60px;
   }
   font-size: 5vw;
   width: 60%;
@@ -72,6 +73,7 @@ const SmallText = styled.h1`
   @media (max-width:450px) {
     font-size: 1.2rem;
     width: 100%;
+    line-height: 40px;
   }
   font-size: 2vw;
   width: 60%;
@@ -116,6 +118,7 @@ const Right = styled.div`
 const StoryHead = styled.h1`
   @media (max-width:450px) {
     font-size: 1.5rem;
+    line-height: 45px;
     padding-left: 2%;
   }
   font-size: 2vw;
@@ -160,6 +163,7 @@ const Mission = styled.div`
   height: 100%;
   h1{
     font-family: 'Concert One', cursive;
+    margin-bottom: 5%;
   }
   p{
     font-family: 'PT Sans', sans-serif;
@@ -179,6 +183,7 @@ const Vision = styled.div`
   height: 100%;
   h1{
     font-family: 'Concert One', cursive;
+    margin-bottom: 5%;
   }
   p{
     font-family: 'PT Sans', sans-serif;
