@@ -63,6 +63,7 @@ const Text = styled.h1`
     width: 100%;
     margin-top: -13%;
     line-height: 60px;
+    margin-bottom: 9%;
   }
   font-size: 5vw;
   width: 60%;
