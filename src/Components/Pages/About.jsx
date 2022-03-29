@@ -194,6 +194,7 @@ const Meet = styled.h1`
   @media (max-width:450px) {
     font-size: 2rem;
     text-align: center;
+    line-height: 40px;
   }
   font-size: 4vw;
   font-family: 'Concert One', cursive;
