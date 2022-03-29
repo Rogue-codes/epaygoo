@@ -156,6 +156,8 @@ function About() {
       <FirstSection>
         <Text>Transforming The Face of Transportation</Text>
         <div className='circle'></div>
+        <div className='circle'></div>
+        <div className='circle'></div>
         <SmallText>ePaygoo is aimed at revolutionizing and providing faster transactions in the transportation industry.</SmallText>
       </FirstSection>
       <Section>
