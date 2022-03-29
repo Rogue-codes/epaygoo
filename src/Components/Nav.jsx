@@ -37,12 +37,13 @@ const Navigation = styled.nav`
             margin-left: 65%;
             border: none;
             border-radius: 50%;
-            padding: 1.2%;
-            .ico{
-                font-size: 1.2rem;
-            }
+            width: 30px;
+            height: 30px;
         }
         .ico{
+            @media (max-width:480px) {
+            font-size: 1.2rem;
+        }
             font-size: 1.5vw;
         }
     }
@@ -94,7 +95,7 @@ const Navigation = styled.nav`
         justify-content: flex-start;
         align-items: center;
         padding: 2% 5%;
-        font-size: 1.5rem;
+        font-size: 1rem;
         color: white;
         border-bottom: 1px solid rgb(0, 0, 14);
         text-decoration: none;
@@ -221,11 +222,12 @@ function Nav({switchTheme, dark}) {
         {
             menuTransitions(
             (styles, item) => item && <animated.div style={styles} className='animate'>
-                <Link to='/mobile'>Mobile App</Link>
-                <Link to='/features'>Features</Link>
-                <Link to='/about'>About Us</Link>
-                <Link to='/payment'>Payment</Link>
-                <Link to='/faq'>Faq</Link>
+                <Link to='/' onClick={()=>setShowMenu(false)}>ePayGoo</Link>
+                <Link to='/mobile' onClick={()=>setShowMenu(false)}>Mobile App</Link>
+                <Link to='/features' onClick={()=>setShowMenu(false)}>Features</Link>
+                <Link to='/about' onClick={()=>setShowMenu(false)}>About Us</Link>
+                <Link to='/payment' onClick={()=>setShowMenu(false)}>Payment</Link>
+                <Link to='/faq' onClick={()=>setShowMenu(false)}>Faq</Link>
             </animated.div>
             )
         }

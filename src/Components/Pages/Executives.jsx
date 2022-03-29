@@ -3,26 +3,21 @@ import {Data} from './ExecutivesData'
 import styled from 'styled-components'
 
 const Container = styled.div`
+  @media (max-width:450px) {
+    flex-direction: column;
+    height: auto;
+  }
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: space-between;
     padding: 2%;
-    .firstAnimate{
-        display: none;
-        width: 100%;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 50;
-        background-color: #010214a6;
-    }
-    .none{
-        display: block;
-    }
 `
 const Card = styled.div`
+    @media (max-width:450px) {
+        margin-bottom: 5%;
+        height: 50vh;
+    }
     position: relative;
     border-radius: 5px;
     max-width: 100%;
@@ -32,6 +27,7 @@ const Card = styled.div`
         border-radius: 5px;
         width: 100%;
         height: 100%;
+        object-fit: cover;
     }
     &:hover{
         .Text{

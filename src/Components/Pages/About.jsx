@@ -58,12 +58,21 @@ const FirstSection = styled.div`
 `
 
 const Text = styled.h1`
+  @media (max-width:450px) {
+    font-size: 3rem;
+    width: 100%;
+    margin-top: -13%;
+  }
   font-size: 5vw;
   width: 60%;
   text-align: center;
   font-family: 'Concert One', cursive;
 `
 const SmallText = styled.h1`
+  @media (max-width:450px) {
+    font-size: 1.2rem;
+    width: 100%;
+  }
   font-size: 2vw;
   width: 60%;
   text-align: center;
@@ -71,6 +80,10 @@ const SmallText = styled.h1`
   margin-top: 2%;
 `
 const Section = styled.div`
+  @media (max-width:450px) {
+    flex-direction: column;
+    height: auto;
+  }
     width: 100%;
     height: 100vh;
     display: flex;
@@ -80,6 +93,12 @@ const Section = styled.div`
     align-items: center;
 `
 const Left = styled.div`
+  @media (max-width:450px) {
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    margin-bottom: 5%;
+  }
   width: 50%;
   background: url('https://static.toiimg.com/thumb/74632167.cms?resizemode=75&width=1200&height=900');
   border-radius: 15px;
@@ -88,15 +107,25 @@ const Left = styled.div`
   height: 80%;
 `
 const Right = styled.div`
+  @media (max-width:450px) {
+    width: 100%;
+  }
   width: 50%;
   height: 100%;
 `
 const StoryHead = styled.h1`
+  @media (max-width:450px) {
+    font-size: 1.5rem;
+    padding-left: 2%;
+  }
   font-size: 2vw;
   font-family: 'Concert One', cursive;
   margin-top: 2%;
 `
 const Story = styled.p`
+  @media (max-width:450px) {
+    font-size: 1.2rem;
+  }
   font-size: 1.5vw;
   line-height: 35px;
   padding-left: 2%;
@@ -105,6 +134,10 @@ const Story = styled.p`
   margin-top: 2%;
 `
 const MissionVision = styled.div`
+  @media (max-width:450px) {
+    flex-direction: column;
+    height: auto;
+  }
   padding: 5%;
   width: 100%;
   height: 40vh;
@@ -113,6 +146,10 @@ const MissionVision = styled.div`
   align-items: center;
 `
 const Mission = styled.div`
+  @media (max-width:450px) {
+    width: 100%;
+    margin-bottom: 5%;
+  }
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -129,6 +166,10 @@ const Mission = styled.div`
   }
 `
 const Vision = styled.div`
+  @media (max-width:450px) {
+    width: 100%;
+    margin-bottom: 5%;
+  }
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -144,6 +185,10 @@ const Vision = styled.div`
   }
 `
 const Meet = styled.h1`
+  @media (max-width:450px) {
+    font-size: 2rem;
+    text-align: center;
+  }
   font-size: 4vw;
   font-family: 'Concert One', cursive;
   margin-top: 5%;
@@ -155,6 +200,7 @@ function About() {
     <Container>
       <FirstSection>
         <Text>Transforming The Face of Transportation</Text>
+        <div className='circle'></div>
         <div className='circle'></div>
         <div className='circle'></div>
         <div className='circle'></div>
