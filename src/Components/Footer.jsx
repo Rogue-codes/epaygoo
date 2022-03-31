@@ -78,7 +78,8 @@ const Bottom = styled.div`
 
 function Footer({dark}) {
   return (
-    <FooterCont bg={dark ? 'rgb(0, 0, 14)' : ' #fffff3'}>
+    <FooterCont bg={dark ? 'rgb(0, 0, 14)' : ' #f0f8ff'}>
+        <hr />
         <Top>
             <ul>
                 <li>Company</li>

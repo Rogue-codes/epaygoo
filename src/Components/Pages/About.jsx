@@ -241,7 +241,7 @@ function About() {
           <p>Fare made easy and SMART</p>
         </Vision>
       </MissionVision>
-      <Meet>Meet the Minds behind ePayGoo</Meet>
+      <Meet>Meet the Mind behind ePayGoo</Meet>
       <Executives/>
     </Container>
   )

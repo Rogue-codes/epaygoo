@@ -8,19 +8,33 @@ const Container = styled.div`
     height: auto;
   }
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: space-between;
+    padding: 2%;
+`
+const Flex = styled.div`
+    @media (max-width:450px) {
+        flex-direction: column;
+        height: auto;
+    }
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10%;
     padding: 2%;
 `
 const Card = styled.div`
     @media (max-width:450px) {
         margin-bottom: 5%;
         height: 50vh;
+        width: 100%;
     }
     position: relative;
     border-radius: 5px;
-    max-width: 100%;
+    width: 50%;
     height: 80vh;
     transition: all .5s linear;
     img{
@@ -68,6 +82,22 @@ const Card = styled.div`
     }
 `
 
+const Abt = styled.div`
+    @media (max-width:450px) {
+        font-size: .8rem;
+        width: 100%;
+        height: auto;
+    }
+    width: 50%;
+    height: 80vh;
+    font-size: 1.6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'PT Sans', sans-serif;
+    line-height: 40px;
+`
+
 
 function Executives() {
 
@@ -76,7 +106,7 @@ function Executives() {
         {
             Data.map((d)=>(
                 
-            <>
+            <Flex>
                     <Card key={d.id}>
                         <img src={d.img} alt={d.name}/>
                         <div className='Text'>
@@ -85,8 +115,11 @@ function Executives() {
                             <h2>{d.rank}</h2>
                         </div>
                     </Card>
+                    <Abt>
+                        {d.about}
+                    </Abt>
 
-            </>
+            </Flex>
         ))}
     </Container>
   )
