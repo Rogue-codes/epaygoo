@@ -26,6 +26,10 @@ const Top = styled.div`
         }
         list-style-type: none;
         li{
+            @media (max-width:480px) {
+                width: 50%;
+                font-size: .6rem;
+            }
             &:nth-child(1){
                 font-weight: 800;
                 margin-bottom: 5%;
@@ -53,7 +57,7 @@ const Bottom = styled.div`
         list-style-type: none;
         li{
             @media (max-width:480px) {
-                font-size: 1rem;
+                font-size: .6rem;
                 margin-top: 2%;
             }
             &:nth-child(1){
@@ -83,7 +87,7 @@ function Footer({dark}) {
         <Top>
             <ul>
                 <li>Company</li>
-                <li>Aboout</li>
+                <li>About</li>
                 <li>Feature</li>
                 <li>Mobile App</li>
                 <li>Faq</li>
@@ -91,7 +95,7 @@ function Footer({dark}) {
 
             <ul>
                 <li>Features</li>
-                <li>Aboout</li>
+                <li>About</li>
                 <li>Feature</li>
                 <li>Mobile App</li>
                 <li>Faq</li>
