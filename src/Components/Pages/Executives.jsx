@@ -64,18 +64,27 @@ const Card = styled.div`
         height: 100%;
         transition: all .5s linear;
         h1{
+            @media (max-width:450px) {
+                font-size: 1.2rem;
+            }
             font-family: 'Concert One', cursive;
             letter-spacing: 5px;
             font-size: 1.8vw;
             text-align: center;
         }
         h2{
+            @media (max-width:450px) {
+                font-size: 1rem;
+            }
             font-family: 'Concert One', cursive;
             letter-spacing: 5px;
             font-size: 1.3vw;
             text-align: center;
         }
         p{
+            @media (max-width:450px) {
+                font-size: 1rem;
+            }
             font-family: 'PT Sans', sans-serif;
             font-size: 1.4vw;
         }
